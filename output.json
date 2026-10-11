@@ -1,374 +1,196 @@
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "execution_count": 13,
-   "id": "47d8dc0e",
-   "metadata": {},
-   "outputs": [],
-@@ -21,7 +21,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "execution_count": 14,
-   "id": "78325a46",
-   "metadata": {},
-   "outputs": [],
-@@ -47,7 +47,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "execution_count": 15,
-   "id": "6f1bf9c1",
-   "metadata": {},
-   "outputs": [],
-@@ -61,7 +61,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 4,
-   "execution_count": 16,
-   "id": "ff6bde19",
-   "metadata": {},
-   "outputs": [
-@@ -119,7 +119,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "execution_count": 17,
-   "id": "f9be85d1",
-   "metadata": {},
-   "outputs": [
-@@ -176,7 +176,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 6,
-   "execution_count": 18,
-   "id": "d905df13",
-   "metadata": {},
-   "outputs": [],
-@@ -304,33 +304,32 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "execution_count": 19,
-   "id": "aa823372",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Epoch 01 | Train Loss: 2.3054 | Val Loss: 2.2582\n",
-      "Epoch 02 | Train Loss: 2.0048 | Val Loss: 2.2271\n",
-      "Epoch 03 | Train Loss: 1.8288 | Val Loss: 2.3388\n",
-      "Epoch 04 | Train Loss: 1.6994 | Val Loss: 1.9368\n",
-      "Epoch 05 | Train Loss: 1.5457 | Val Loss: 1.7457\n",
-      "Epoch 06 | Train Loss: 1.4182 | Val Loss: 2.9371\n",
-      "Epoch 07 | Train Loss: 1.3260 | Val Loss: 1.9869\n",
-      "Epoch 08 | Train Loss: 1.2108 | Val Loss: 2.1818\n",
-      "Epoch 09 | Train Loss: 1.0855 | Val Loss: 1.7862\n",
-      "Early stopping dipicu pada epoch 9!\n",
-      "Epoch 01 | Train Loss: 2.2822 | Val Loss: 3.1401\n",
-      "Epoch 02 | Train Loss: 1.9703 | Val Loss: 2.6920\n",
-      "Epoch 03 | Train Loss: 1.8136 | Val Loss: 2.2327\n",
-      "Epoch 04 | Train Loss: 1.6928 | Val Loss: 1.8928\n",
-      "Epoch 05 | Train Loss: 1.5247 | Val Loss: 1.9535\n",
-      "Epoch 06 | Train Loss: 1.4311 | Val Loss: 2.1893\n",
-      "Epoch 07 | Train Loss: 1.3319 | Val Loss: 2.0773\n",
-      "Epoch 08 | Train Loss: 1.2279 | Val Loss: 2.9540\n",
-      "Early stopping dipicu pada epoch 8!\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B1 ---\n",
-      "Trainable Parameters: 11181642\n",
-      "Learning Rate(s): [0.001]\n",
-      "Epochs to Converge: 9\n",
-      "Total Training Time (s): 33.43\n",
-      "Final Validation Accuracy: 0.4027\n",
-      "Final Test Macro F1-Score: 0.3931\n",
-      "Final Test Accuracy: 0.4181\n"
-      "Epochs to Converge: 8\n",
-      "Total Training Time (s): 28.92\n",
-      "Final Validation Accuracy: 0.2987\n",
-      "Final Test Macro F1-Score: 0.2926\n",
-      "Final Test Accuracy: 0.3278\n"
-     ]
-    }
-   ],
-@@ -364,33 +363,33 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "execution_count": 20,
-   "id": "ea31e7bd",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Epoch 01 | Train Loss: 1.4575 | Val Loss: 0.7090\n",
-      "Epoch 02 | Train Loss: 0.5747 | Val Loss: 0.4489\n",
-      "Epoch 03 | Train Loss: 0.3923 | Val Loss: 0.3407\n",
-      "Epoch 04 | Train Loss: 0.3226 | Val Loss: 0.3198\n",
-      "Epoch 05 | Train Loss: 0.2731 | Val Loss: 0.2727\n",
-      "Epoch 06 | Train Loss: 0.2450 | Val Loss: 0.2593\n",
-      "Epoch 07 | Train Loss: 0.2157 | Val Loss: 0.2450\n",
-      "Epoch 08 | Train Loss: 0.1922 | Val Loss: 0.2381\n",
-      "Epoch 09 | Train Loss: 0.1837 | Val Loss: 0.2343\n",
-      "Epoch 10 | Train Loss: 0.1691 | Val Loss: 0.2204\n",
-      "Epoch 01 | Train Loss: 1.3239 | Val Loss: 0.6364\n",
-      "Epoch 02 | Train Loss: 0.5410 | Val Loss: 0.4017\n",
-      "Epoch 03 | Train Loss: 0.3697 | Val Loss: 0.3458\n",
-      "Epoch 04 | Train Loss: 0.3001 | Val Loss: 0.2914\n",
-      "Epoch 05 | Train Loss: 0.2656 | Val Loss: 0.2951\n",
-      "Epoch 06 | Train Loss: 0.2325 | Val Loss: 0.2508\n",
-      "Epoch 07 | Train Loss: 0.2142 | Val Loss: 0.2479\n",
-      "Epoch 08 | Train Loss: 0.1908 | Val Loss: 0.2377\n",
-      "Epoch 09 | Train Loss: 0.1724 | Val Loss: 0.2307\n",
-      "Epoch 10 | Train Loss: 0.1654 | Val Loss: 0.2301\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B2 ---\n",
-      "Trainable Parameters: 5130\n",
-      "Learning Rate(s): [0.001]\n",
-      "Epochs to Converge: 10\n",
-      "Total Training Time (s): 14.65\n",
-      "Final Validation Accuracy: 0.9362\n",
-      "Final Test Macro F1-Score: 0.9168\n",
-      "Final Test Accuracy: 0.9164\n"
-      "Total Training Time (s): 14.3\n",
-      "Final Validation Accuracy: 0.9295\n",
-      "Final Test Macro F1-Score: 0.9231\n",
-      "Final Test Accuracy: 0.9231\n"
-     ]
-    }
-   ],
-@@ -430,32 +429,32 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 9,
-   "execution_count": 21,
-   "id": "168ca5b7",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Epoch 01 | Train Loss: 0.7363 | Val Loss: 0.2601\n",
-      "Epoch 02 | Train Loss: 0.1307 | Val Loss: 0.2213\n",
-      "Epoch 03 | Train Loss: 0.0448 | Val Loss: 0.2076\n",
-      "Epoch 04 | Train Loss: 0.0161 | Val Loss: 0.1938\n",
-      "Epoch 05 | Train Loss: 0.0096 | Val Loss: 0.1924\n",
-      "Epoch 06 | Train Loss: 0.0077 | Val Loss: 0.1948\n",
-      "Epoch 07 | Train Loss: 0.0045 | Val Loss: 0.1899\n",
-      "Epoch 08 | Train Loss: 0.0036 | Val Loss: 0.1936\n",
-      "Epoch 09 | Train Loss: 0.0039 | Val Loss: 0.1920\n",
-      "Epoch 10 | Train Loss: 0.0023 | Val Loss: 0.2019\n",
-      "Epoch 01 | Train Loss: 0.7478 | Val Loss: 0.2713\n",
-      "Epoch 02 | Train Loss: 0.1270 | Val Loss: 0.2405\n",
-      "Epoch 03 | Train Loss: 0.0437 | Val Loss: 0.2196\n",
-      "Epoch 04 | Train Loss: 0.0191 | Val Loss: 0.2175\n",
-      "Epoch 05 | Train Loss: 0.0095 | Val Loss: 0.2176\n",
-      "Epoch 06 | Train Loss: 0.0066 | Val Loss: 0.2128\n",
-      "Epoch 07 | Train Loss: 0.0059 | Val Loss: 0.2117\n",
-      "Epoch 08 | Train Loss: 0.0035 | Val Loss: 0.2065\n",
-      "Epoch 09 | Train Loss: 0.0029 | Val Loss: 0.2084\n",
-      "Epoch 10 | Train Loss: 0.0032 | Val Loss: 0.2130\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B3 ---\n",
-      "Trainable Parameters: 8398858\n",
-      "Learning Rate(s): [0.0001, 0.001]\n",
-      "Epochs to Converge: 10\n",
-      "Total Training Time (s): 18.01\n",
-      "Final Validation Accuracy: 0.9396\n",
-      "Final Test Macro F1-Score: 0.9261\n",
-      "Total Training Time (s): 17.39\n",
-      "Final Validation Accuracy: 0.9362\n",
-      "Final Test Macro F1-Score: 0.9258\n",
-      "Final Test Accuracy: 0.9264\n"
-     ]
-    }
-@@ -503,7 +502,7 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 10,
-   "execution_count": 22,
-   "id": "cc9eada6",
-   "metadata": {},
-   "outputs": [
-@@ -513,16 +512,25 @@
-     "text": [
-      "\n",
-      "=== Memulai B4 Skenario 1 (Tanpa Augmentasi) ===\n",
-      "Epoch 01 | Train Loss: 1.4305 | Val Loss: 0.7114\n",
-      "Epoch 02 | Train Loss: 0.5539 | Val Loss: 0.4452\n",
-      "Epoch 03 | Train Loss: 0.3872 | Val Loss: 0.3499\n",
-      "Epoch 04 | Train Loss: 0.3088 | Val Loss: 0.3100\n",
-      "Epoch 05 | Train Loss: 0.2731 | Val Loss: 0.2708\n",
-      "Epoch 06 | Train Loss: 0.2282 | Val Loss: 0.2576\n",
-      "Epoch 07 | Train Loss: 0.2126 | Val Loss: 0.2493\n",
-      "Epoch 08 | Train Loss: 0.1899 | Val Loss: 0.2314\n",
-      "Epoch 09 | Train Loss: 0.1787 | Val Loss: 0.2350\n",
-      "Epoch 10 | Train Loss: 0.1684 | Val Loss: 0.2247\n"
-      "Epoch 01 | Train Loss: 1.4638 | Val Loss: 0.7231\n",
-      "Epoch 02 | Train Loss: 0.5837 | Val Loss: 0.4259\n",
-      "Epoch 03 | Train Loss: 0.3885 | Val Loss: 0.3606\n",
-      "Epoch 04 | Train Loss: 0.3143 | Val Loss: 0.3036\n",
-      "Epoch 05 | Train Loss: 0.2714 | Val Loss: 0.2818\n",
-      "Epoch 06 | Train Loss: 0.2454 | Val Loss: 0.2510\n",
-      "Epoch 07 | Train Loss: 0.2078 | Val Loss: 0.2426\n",
-      "Epoch 08 | Train Loss: 0.1966 | Val Loss: 0.2375\n",
-      "Epoch 09 | Train Loss: 0.1775 | Val Loss: 0.2237\n",
-      "Epoch 10 | Train Loss: 0.1682 | Val Loss: 0.2303\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B4 (Tanpa Augmentasi) ---\n",
-      "Trainable Parameters: 5130\n",
-      "Learning Rate(s): [0.001]\n",
-      "Epochs to Converge: 10\n",
-      "Total Training Time (s): 14.32\n",
-      "Final Validation Accuracy: 0.9396\n",
-      "Final Test Macro F1-Score: 0.9196\n",
-      "Final Test Accuracy: 0.9197\n"
-     ]
-    }
-   ],
-@@ -547,12 +555,16 @@
-    "    device=device,\n",
-    "    max_epochs=10,   \n",
-    "    patience=4\n",
-    ")\n"
-    ")\n",
-    "\n",
-    "print(\"\\n--- Rekapitulasi Metrik Eksperimen B4 (Tanpa Augmentasi) ---\")\n",
-    "for key, value in hasil_b4_no_aug.items():\n",
-    "    print(f\"{key}: {value}\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 11,
-   "execution_count": 23,
-   "id": "d1f2e679",
-   "metadata": {},
-   "outputs": [
-@@ -562,26 +574,26 @@
-     "text": [
-      "Total Train images (Augmented): 1391\n",
-      "\n",
-      "=== Memulai B4 Skenario 2 (Dengan Augmentasi Lengkap sesuai Soal) ===\n",
-      "Epoch 01 | Train Loss: 1.4311 | Val Loss: 0.7727\n",
-      "Epoch 02 | Train Loss: 0.6411 | Val Loss: 0.4513\n",
-      "Epoch 03 | Train Loss: 0.4567 | Val Loss: 0.3781\n",
-      "Epoch 04 | Train Loss: 0.3748 | Val Loss: 0.3231\n",
-      "Epoch 05 | Train Loss: 0.3328 | Val Loss: 0.3045\n",
-      "Epoch 06 | Train Loss: 0.3116 | Val Loss: 0.2894\n",
-      "Epoch 07 | Train Loss: 0.2611 | Val Loss: 0.2729\n",
-      "Epoch 08 | Train Loss: 0.2523 | Val Loss: 0.2590\n",
-      "Epoch 09 | Train Loss: 0.2370 | Val Loss: 0.2395\n",
-      "Epoch 10 | Train Loss: 0.2273 | Val Loss: 0.2489\n",
-      "=== Memulai B4 Skenario 2 (Dengan Augmentasi Lengkap) ===\n",
-      "Epoch 01 | Train Loss: 1.4541 | Val Loss: 0.7896\n",
-      "Epoch 02 | Train Loss: 0.6590 | Val Loss: 0.5005\n",
-      "Epoch 03 | Train Loss: 0.4509 | Val Loss: 0.4319\n",
-      "Epoch 04 | Train Loss: 0.3890 | Val Loss: 0.3416\n",
-      "Epoch 05 | Train Loss: 0.3483 | Val Loss: 0.3235\n",
-      "Epoch 06 | Train Loss: 0.3231 | Val Loss: 0.3023\n",
-      "Epoch 07 | Train Loss: 0.2895 | Val Loss: 0.2661\n",
-      "Epoch 08 | Train Loss: 0.2578 | Val Loss: 0.2558\n",
-      "Epoch 09 | Train Loss: 0.2409 | Val Loss: 0.2789\n",
-      "Epoch 10 | Train Loss: 0.2386 | Val Loss: 0.2721\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B4 (Dengan Augmentasi) ---\n",
-      "Trainable Parameters: 5130\n",
-      "Learning Rate(s): [0.001]\n",
-      "Epochs to Converge: 10\n",
-      "Total Training Time (s): 100.89\n",
-      "Final Validation Accuracy: 0.9128\n",
-      "Final Test Macro F1-Score: 0.9034\n",
-      "Final Test Accuracy: 0.903\n"
-      "Total Training Time (s): 104.8\n",
-      "Final Validation Accuracy: 0.896\n",
-      "Final Test Macro F1-Score: 0.8872\n",
-      "Final Test Accuracy: 0.8863\n"
-     ]
-    }
-   ],
-@@ -623,7 +635,7 @@
-    "model_b4_aug.fc = nn.Linear(model_b4_aug.fc.in_features, 10)\n",
-    "optimizer_b4_aug = torch.optim.AdamW(model_b4_aug.fc.parameters(), lr=1e-3, weight_decay=1e-2)\n",
-    "\n",
-    "print(\"\\n=== Memulai B4 Skenario 2 (Dengan Augmentasi Lengkap sesuai Soal) ===\")\n",
-    "print(\"\\n=== Memulai B4 Skenario 2 (Dengan Augmentasi Lengkap) ===\")\n",
-    "hasil_b4_aug = train_and_log_experiment(\n",
-    "    model=model_b4_aug,\n",
-    "    train_loader=train_loader_aug, \n",
-@@ -643,46 +655,32 @@
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 12,
-   "execution_count": 24,
-   "id": "5cc2f22b",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Downloading: \"https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth\" to C:\\Users\\annab/.cache\\torch\\hub\\checkpoints\\efficientnet_b0_rwightman-7f5810bc.pth\n"
-     ]
+{
+  "dataset": {
+    "name": "Oxford-IIIT Pet",
+    "selected_classes_original_index": [0, 1, 2, 3, 4, 11, 14, 15, 28, 29],
+    "class_names": [
+      "Abyssinian",
+      "American Bulldog",
+      "American Pit Bull",
+      "Basset Hound",
+      "Beagle",
+      "Bombay",
+      "Boxer",
+      "British Shorthair",
+      "Chihuahua",
+      "Pomeranian"
+    ],
+    "split": {
+      "strategy": "stratified 70/15/15",
+      "train": 1391,
+      "val": 298,
+      "test": 299
     },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "100%|██████████| 20.5M/20.5M [00:03<00:00, 5.49MB/s]\n"
-     ]
+    "seed": 42
+  },
+  "experiments": {
+    "B1_baseline_scratch": {
+      "model": "resnet18 (weights=None)",
+      "trainable_parameters": 11181642,
+      "learning_rates": [0.001],
+      "epochs_to_converge": 8,
+      "total_training_time_s": 28.92,
+      "final_validation_accuracy": 0.2987,
+      "final_test_macro_f1": 0.2926,
+      "final_test_accuracy": 0.3278,
+      "early_stopping_triggered": true,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 2.2822, "val_loss": 3.1401},
+        {"epoch": 2, "train_loss": 1.9703, "val_loss": 2.6920},
+        {"epoch": 3, "train_loss": 1.8136, "val_loss": 2.2327},
+        {"epoch": 4, "train_loss": 1.6928, "val_loss": 1.8928},
+        {"epoch": 5, "train_loss": 1.5247, "val_loss": 1.9535},
+        {"epoch": 6, "train_loss": 1.4311, "val_loss": 2.1893},
+        {"epoch": 7, "train_loss": 1.3319, "val_loss": 2.0773},
+        {"epoch": 8, "train_loss": 1.2279, "val_loss": 2.9540}
+      ]
     },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Epoch 01 | Train Loss: 1.5351 | Val Loss: 0.8267\n",
-      "Epoch 02 | Train Loss: 0.7399 | Val Loss: 0.5237\n",
-      "Epoch 03 | Train Loss: 0.5262 | Val Loss: 0.4273\n",
-      "Epoch 04 | Train Loss: 0.4313 | Val Loss: 0.3855\n",
-      "Epoch 05 | Train Loss: 0.3766 | Val Loss: 0.3511\n",
-      "Epoch 06 | Train Loss: 0.3258 | Val Loss: 0.3222\n",
-      "Epoch 07 | Train Loss: 0.2944 | Val Loss: 0.3127\n",
-      "Epoch 08 | Train Loss: 0.2693 | Val Loss: 0.2898\n",
-      "Epoch 09 | Train Loss: 0.2396 | Val Loss: 0.2914\n",
-      "Epoch 10 | Train Loss: 0.2292 | Val Loss: 0.2849\n",
-      "Epoch 01 | Train Loss: 1.5130 | Val Loss: 0.8408\n",
-      "Epoch 02 | Train Loss: 0.7207 | Val Loss: 0.5425\n",
-      "Epoch 03 | Train Loss: 0.5178 | Val Loss: 0.4442\n",
-      "Epoch 04 | Train Loss: 0.4171 | Val Loss: 0.3822\n",
-      "Epoch 05 | Train Loss: 0.3558 | Val Loss: 0.3618\n",
-      "Epoch 06 | Train Loss: 0.3205 | Val Loss: 0.3282\n",
-      "Epoch 07 | Train Loss: 0.2899 | Val Loss: 0.3125\n",
-      "Epoch 08 | Train Loss: 0.2631 | Val Loss: 0.3112\n",
-      "Epoch 09 | Train Loss: 0.2365 | Val Loss: 0.2934\n",
-      "Epoch 10 | Train Loss: 0.2285 | Val Loss: 0.2839\n",
-      "\n",
-      "--- Rekapitulasi Metrik Eksperimen B5 ---\n",
-      "Trainable Parameters: 12810\n",
-      "Learning Rate(s): [0.001]\n",
-      "Epochs to Converge: 10\n",
-      "Total Training Time (s): 19.0\n",
-      "Final Validation Accuracy: 0.9027\n",
-      "Final Test Macro F1-Score: 0.9068\n",
-      "Total Training Time (s): 16.97\n",
-      "Final Validation Accuracy: 0.906\n",
-      "Final Test Macro F1-Score: 0.9069\n",
-      "Final Test Accuracy: 0.9064\n"
-     ]
+    "B2_feature_extraction": {
+      "model": "resnet18 (ImageNet1K_V1, backbone frozen)",
+      "trainable_parameters": 5130,
+      "learning_rates": [0.001],
+      "epochs_to_converge": 10,
+      "total_training_time_s": 14.3,
+      "final_validation_accuracy": 0.9295,
+      "final_test_macro_f1": 0.9231,
+      "final_test_accuracy": 0.9231,
+      "early_stopping_triggered": false,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 1.3239, "val_loss": 0.6364},
+        {"epoch": 2, "train_loss": 0.5410, "val_loss": 0.4017},
+        {"epoch": 3, "train_loss": 0.3697, "val_loss": 0.3458},
+        {"epoch": 4, "train_loss": 0.3001, "val_loss": 0.2914},
+        {"epoch": 5, "train_loss": 0.2656, "val_loss": 0.2951},
+        {"epoch": 6, "train_loss": 0.2325, "val_loss": 0.2508},
+        {"epoch": 7, "train_loss": 0.2142, "val_loss": 0.2479},
+        {"epoch": 8, "train_loss": 0.1908, "val_loss": 0.2377},
+        {"epoch": 9, "train_loss": 0.1724, "val_loss": 0.2307},
+        {"epoch": 10, "train_loss": 0.1654, "val_loss": 0.2301}
+      ]
+    },
+    "B3_progressive_fine_tuning": {
+      "model": "resnet18 (ImageNet1K_V1, layer4 + fc trainable)",
+      "trainable_parameters": 8398858,
+      "learning_rates": [0.0001, 0.001],
+      "epochs_to_converge": 10,
+      "total_training_time_s": 17.39,
+      "final_validation_accuracy": 0.9362,
+      "final_test_macro_f1": 0.9258,
+      "final_test_accuracy": 0.9264,
+      "early_stopping_triggered": false,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 0.7478, "val_loss": 0.2713},
+        {"epoch": 2, "train_loss": 0.1270, "val_loss": 0.2405},
+        {"epoch": 3, "train_loss": 0.0437, "val_loss": 0.2196},
+        {"epoch": 4, "train_loss": 0.0191, "val_loss": 0.2175},
+        {"epoch": 5, "train_loss": 0.0095, "val_loss": 0.2176},
+        {"epoch": 6, "train_loss": 0.0066, "val_loss": 0.2128},
+        {"epoch": 7, "train_loss": 0.0059, "val_loss": 0.2117},
+        {"epoch": 8, "train_loss": 0.0035, "val_loss": 0.2065},
+        {"epoch": 9, "train_loss": 0.0029, "val_loss": 0.2084},
+        {"epoch": 10, "train_loss": 0.0032, "val_loss": 0.2130}
+      ]
+    },
+    "B4_scenario1_no_augmentation": {
+      "model": "resnet18 (ImageNet1K_V1, backbone frozen)",
+      "trainable_parameters": 5130,
+      "learning_rates": [0.001],
+      "epochs_to_converge": 10,
+      "total_training_time_s": 14.32,
+      "final_validation_accuracy": 0.9396,
+      "final_test_macro_f1": 0.9196,
+      "final_test_accuracy": 0.9197,
+      "early_stopping_triggered": false,
+      "train_accuracy": 0.9777,
+      "generalization_gap_train_minus_val": 0.0381,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 1.4638, "val_loss": 0.7231},
+        {"epoch": 2, "train_loss": 0.5837, "val_loss": 0.4259},
+        {"epoch": 3, "train_loss": 0.3885, "val_loss": 0.3606},
+        {"epoch": 4, "train_loss": 0.3143, "val_loss": 0.3036},
+        {"epoch": 5, "train_loss": 0.2714, "val_loss": 0.2818},
+        {"epoch": 6, "train_loss": 0.2454, "val_loss": 0.2510},
+        {"epoch": 7, "train_loss": 0.2078, "val_loss": 0.2426},
+        {"epoch": 8, "train_loss": 0.1966, "val_loss": 0.2375},
+        {"epoch": 9, "train_loss": 0.1775, "val_loss": 0.2237},
+        {"epoch": 10, "train_loss": 0.1682, "val_loss": 0.2303}
+      ]
+    },
+    "B4_scenario2_with_augmentation": {
+      "model": "resnet18 (ImageNet1K_V1, backbone frozen)",
+      "augmentations": [
+        "Resize(256)",
+        "RandomResizedCrop(224, scale=(0.8, 1.0))",
+        "RandomHorizontalFlip(p=0.5)",
+        "RandomRotation(15)",
+        "ColorJitter(brightness=0.2, contrast=0.2)"
+      ],
+      "trainable_parameters": 5130,
+      "learning_rates": [0.001],
+      "epochs_to_converge": 10,
+      "total_training_time_s": 104.8,
+      "final_validation_accuracy": 0.896,
+      "final_test_macro_f1": 0.8872,
+      "final_test_accuracy": 0.8863,
+      "early_stopping_triggered": false,
+      "train_accuracy": 0.9439,
+      "generalization_gap_train_minus_val": 0.0479,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 1.4541, "val_loss": 0.7896},
+        {"epoch": 2, "train_loss": 0.6590, "val_loss": 0.5005},
+        {"epoch": 3, "train_loss": 0.4509, "val_loss": 0.4319},
+        {"epoch": 4, "train_loss": 0.3890, "val_loss": 0.3416},
+        {"epoch": 5, "train_loss": 0.3483, "val_loss": 0.3235},
+        {"epoch": 6, "train_loss": 0.3231, "val_loss": 0.3023},
+        {"epoch": 7, "train_loss": 0.2895, "val_loss": 0.2661},
+        {"epoch": 8, "train_loss": 0.2578, "val_loss": 0.2558},
+        {"epoch": 9, "train_loss": 0.2409, "val_loss": 0.2789},
+        {"epoch": 10, "train_loss": 0.2386, "val_loss": 0.2721}
+      ]
+    },
+    "B5_comparison_architecture": {
+      "model": "efficientnet_b0 (ImageNet1K_V1, backbone frozen)",
+      "trainable_parameters": 12810,
+      "learning_rates": [0.001],
+      "epochs_to_converge": 10,
+      "total_training_time_s": 16.97,
+      "final_validation_accuracy": 0.906,
+      "final_test_macro_f1": 0.9069,
+      "final_test_accuracy": 0.9064,
+      "early_stopping_triggered": false,
+      "epoch_log": [
+        {"epoch": 1, "train_loss": 1.5130, "val_loss": 0.8408},
+        {"epoch": 2, "train_loss": 0.7207, "val_loss": 0.5425},
+        {"epoch": 3, "train_loss": 0.5178, "val_loss": 0.4442},
+        {"epoch": 4, "train_loss": 0.4171, "val_loss": 0.3822},
+        {"epoch": 5, "train_loss": 0.3558, "val_loss": 0.3618},
+        {"epoch": 6, "train_loss": 0.3205, "val_loss": 0.3282},
+        {"epoch": 7, "train_loss": 0.2899, "val_loss": 0.3125},
+        {"epoch": 8, "train_loss": 0.2631, "val_loss": 0.3112},
+        {"epoch": 9, "train_loss": 0.2365, "val_loss": 0.2934},
+        {"epoch": 10, "train_loss": 0.2285, "val_loss": 0.2839}
+      ]
     }
+  },
+  "loss_history_curves": {
+    "note": "Recorded by train_model_with_history, which continues training the already-trained B1/B2/B3 models for 10 more epochs (not a fresh run), so values differ from the epoch_log above.",
+    "B1": {
+      "train_loss": [1.1674, 0.9472, 0.8390, 0.6958, 0.4871, 0.3702, 0.2854, 0.1418, 0.1275, 0.0772],
+      "val_loss": [1.4763, 1.7398, 3.1181, 1.9136, 2.4042, 2.0756, 2.1839, 1.9498, 2.9939, 2.6145]
+    },
+    "B2": {
+      "train_loss": [0.1520, 0.1448, 0.1343, 0.1201, 0.1165, 0.1227, 0.1102, 0.1102, 0.0930, 0.0943],
+      "val_loss": [0.2164, 0.2221, 0.2262, 0.2104, 0.2187, 0.2181, 0.2125, 0.2128, 0.2145, 0.1999]
+    },
+    "B3": {
+      "train_loss": [0.0021, 0.0018, 0.0018, 0.0012, 0.0014, 0.0011, 0.0013, 0.0010, 0.0007, 0.0008],
+      "val_loss": [0.2204, 0.2196, 0.2161, 0.2258, 0.2300, 0.2289, 0.2322, 0.2274, 0.2283, 0.2215]
+    }
+  },
+  "summary": {
+    "best_validation_accuracy": {"experiment": "B4_scenario1_no_augmentation", "value": 0.9396},
+    "best_test_accuracy": {"experiment": "B3_progressive_fine_tuning", "value": 0.9264},
+    "best_test_macro_f1": {"experiment": "B3_progressive_fine_tuning", "value": 0.9258},
+    "fastest_training": {"experiment": "B2_feature_extraction", "value_s": 14.3},
+    "error_analysis_model": "B3_progressive_fine_tuning"
+  }
+}
